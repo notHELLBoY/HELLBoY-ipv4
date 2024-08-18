@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# پیام خوش‌آمدگویی
+echo "Welcome to the IPv4 Random Generator!"
+
+# اجرای اسکریپت پایتون
+python3 - <<'END'
 import ipaddress
 import random
 
@@ -35,4 +42,5 @@ end = int(ipaddress.IPv4Address(end_ip))
 random_ip = ipaddress.IPv4Address(random.randint(start, end))
 
 # نمایش آدرس IP
-print(f"IPv4 is: {random_ip}")
+print(f"Generated IPv4 is: {random_ip}")
+END
